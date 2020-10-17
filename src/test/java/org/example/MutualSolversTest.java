@@ -14,9 +14,9 @@ public class MutualSolversTest {
     public static final  ThreadLocalRandom random = ThreadLocalRandom.current();
 
     private static KnapsackCase generateRandomCase() {
-        KnapsackCase knapsackCase = new KnapsackCase(random.nextInt(1_000));
+        KnapsackCase knapsackCase = new KnapsackCase(random.nextInt(10_000));
 
-        int itemsCount = random.nextInt(25);
+        int itemsCount = random.nextInt(18);
         for (int i = 0; i < itemsCount; i++) {
             knapsackCase.addItem(new Item(random.nextInt(99) + 1, random.nextInt(99) + 1));
         }
