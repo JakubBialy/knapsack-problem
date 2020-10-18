@@ -47,11 +47,11 @@ class RecursiveController: Controller {
                         val item = Item(Integer.parseInt(input[0]), Integer.parseInt(input[1]))
                         knapsackCase.addItem(item)
                     } catch (e: Exception) {
-                        System.err.println("Źle wprowadzone dane dla przedmiotu")
+                        System.err.println("Inserting item data error")
                     }
                 }
             } catch (e: ParseException) {
-                System.err.println("Źle wprowadzone dane")
+                System.err.println("Inserting data error")
             }
         } while (repeatLoop)
 

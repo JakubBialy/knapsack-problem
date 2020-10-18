@@ -10,9 +10,9 @@ class MainController(
 
     override var repeatLoop = true
 
-    private val dynamicOption = Option("d", false, "Metoda dynamiczna")
-    private val recursiveOption = Option("r", false, "Metoda rekursywna")
-    private val exitOption = Option("e", false, "Wyjście z programu")
+    private val dynamicOption = Option("d", false, "Dynamic method")
+    private val recursiveOption = Option("r", false, "Recursive Method")
+    private val exitOption = Option("e", false, "Exit program")
 
     private val options = Options().apply {
         addOption(dynamicOption)
@@ -24,7 +24,7 @@ class MainController(
 
     override fun showHelp() {
         val formatter = HelpFormatter()
-        formatter.printHelp("Problem plecakowy", options)
+        formatter.printHelp("Knapsnack problem", options)
     }
 
     private fun containsRequiredOptions(cmd: CommandLine): Boolean {
@@ -34,7 +34,7 @@ class MainController(
             return true
         }
 
-        System.err.println("Nie ma podanego trybu.")
+        System.err.println("This mode doesn't exists")
         return false
     }
 
@@ -62,7 +62,7 @@ class MainController(
                     AppMode.E -> repeatLoop = false
                 }
             } catch (e: ParseException) {
-                System.err.println("Źle wprowadzone dane")
+                System.err.println("Inserting data error")
             }
             println()
         } while (repeatLoop)
