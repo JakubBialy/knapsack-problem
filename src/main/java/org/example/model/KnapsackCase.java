@@ -36,4 +36,10 @@ public class KnapsackCase {
     public void addItems(Collection<Item> items) {
         this.items.addAll(items);
     }
+
+    public void printDescription() {
+        System.out.println("Knapsack info");
+        System.out.println("Items to solve: " + getItemsCopy());
+        System.out.println("Knapsack capacity: " + knapsackCapacity);
+    }
 }

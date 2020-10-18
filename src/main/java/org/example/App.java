@@ -3,7 +3,7 @@ package org.example;
 import org.example.controllers.DynamicController;
 import org.example.controllers.MainController;
 import org.example.controllers.RecursiveController;
-import org.example.interfaces.Controller;
+import org.example.controllers.Controller;
 
 public class App {
     public static void main(String[] args) {
