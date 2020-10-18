@@ -1,18 +1,18 @@
 package org.example;
 
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.Options;
-import org.example.model.Item;
-import org.example.model.KnapsackCase;
-import org.example.model.KnapsackCaseSolution;
-import org.example.solvers.RecursiveSolver;
+import org.example.controllers.DynamicController;
+import org.example.controllers.MainController;
+import org.example.controllers.RecursiveController;
+import org.example.interfaces.Controller;
 
 public class App {
     public static void main(String[] args) {
 
-        Controller controller = new Controller();
-        controller.start();
+        final Controller dynamicController = new DynamicController();
+        final Controller recursiveController = new RecursiveController();
+
+        MainController mainController = new MainController(dynamicController, recursiveController);
+        mainController.start();
 //
 //        KnapsackCase knapsackCase = new KnapsackCase(10);
 //        knapsackCase.addItem(new Item(3, 100));
