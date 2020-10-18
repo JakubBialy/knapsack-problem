@@ -74,4 +74,16 @@ public class KnapsackCaseSolution {
     public boolean isValid() {
         return isValid;
     }
+
+    public void printDescription() {
+        System.out.println("----------> Problem description: ");
+        System.out.println("Items to solve: " + this.getItemsCopy());
+        System.out.println("Knapsack capacity: " + this.getKnapsackCapacity());
+        System.out.println("Total items value: " + this.getTotalItemsValue());
+        System.out.println("Total items weight: " + this.getTotalItemsWeight());
+        System.out.println("Is valid solution: " + this.isValid());
+        System.out.println("Items count in knapsack: " + this.getItemsCopy().size());
+        System.out.println("Items in knapsack: " + this.getItemsCopy());
+        System.out.println("----------> END");
+    }
 }
