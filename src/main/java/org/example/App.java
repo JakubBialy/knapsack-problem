@@ -1,13 +1,12 @@
 package org.example;
 
+import org.example.controllers.Controller;
 import org.example.controllers.DynamicController;
 import org.example.controllers.MainController;
 import org.example.controllers.RecursiveController;
-import org.example.controllers.Controller;
 
 public class App {
     public static void main(String[] args) {
-
         final Controller dynamicController = new DynamicController();
         final Controller recursiveController = new RecursiveController();
 
